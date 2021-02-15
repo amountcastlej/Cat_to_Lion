@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat to Lion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container top">
+        <button>Restore</button><br>
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+        <img src="images/cat.jpeg" alt="cat">
+</div>
+</body>
+<script>
+    $('img').click(function(){
+        if($(this).attr('src')=='images/lion.jpg'){
+            $(this).slideUp();
+        }
+        $(this).attr('src', 'images/lion.jpg')
+    })
+    $('button').click(function(){
+        $('img').slideDown();
+        $('img').attr('src', 'images/cat.jpeg');
+    })
+</script>
+</html>
+
